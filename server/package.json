@@ -18,12 +18,17 @@
     "multer": "^1.4.5-lts.1",
     "multer-gridfs-storage": "^5.0.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "npm-force-resolutions": "^0.0.10"
+  },
+  "resolutions": {
+    "multer": "1.4.2"
+  },
   "scripts": {
-    "preinstall": "npm install --legacy-peer-deps",
+    "preinstall": "npx npm-force-resolutions",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    
+    "vercel-build": "npm install --legacy-peer-deps && npm run build"
   },
   "keywords": [],
   "author": "",
